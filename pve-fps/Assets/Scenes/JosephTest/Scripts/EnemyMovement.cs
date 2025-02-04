@@ -1,32 +1,92 @@
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 
 
 public enum MovementState
 {
-    Idle, Patrol, Chase
+    Idle, Wander, Chase
 }
 public class EnemyMovement : MonoBehaviour
 {
 
-   // private MovementState _movementState;
+    private MovementState _movementState;
     [SerializeField] NavMeshAgent _enemy;
+
+   // [SerializeField] Transform _player;
     [SerializeField] Transform _target;
+
+    [SerializeField] float _chaseSpeed;
+    [SerializeField] float _wanderSpeed;
+
+    [SerializeField] float _chaseRange;
+    [SerializeField] float _wanderRadius;
+    [SerializeField] float _wanderTimer;
+
+    private float _timer;
+
 private void Start() 
 {
-    //_movementState = MovementState.Patrol;
+    _timer = _wanderTimer;
+    _movementState = MovementState.Wander;
+    _enemy.speed = _wanderSpeed;
 }    
 
 void Update()
     {
-       /* if (_movementState == MovementState.Patrol)
+        // changes action based off of state
+        if (_movementState == MovementState.Wander)
         {
-            
-        } */
+            HandleWander();
+        } 
+        if (_movementState == MovementState.Chase)
+        {
+            HandleChase();
+        }
 
-        if (_target != null)
+        // sets state
+
+        if (Vector3.Distance(_target.position, transform.position) < _chaseRange)
         {
-            _enemy.SetDestination(_target.position);
+            _movementState = MovementState.Chase;
+        }
+        else
+        {
+            _movementState = MovementState.Wander;
         }
     }
+
+    private void HandleChase()
+    {
+        _enemy.speed = _chaseSpeed;
+        _enemy.SetDestination(_target.position);
+    }
+    
+    private void HandleWander()
+    {
+        _enemy.speed = _wanderSpeed;
+        _timer += Time.deltaTime;
+
+        if (_timer > _wanderTimer)
+        {
+            Vector3 newPosition = RandomNavSphere(transform.position, _wanderRadius, -1);
+            _enemy.SetDestination(newPosition);
+            _timer = 0;
+        }
+    }
+
+    // takes enemy's current position and then returns a new position scaled with its _wanderRadius
+    private Vector3 RandomNavSphere(Vector3 origin, float distance, int layerMask)
+    {
+        Vector3 randomDirection = Random.insideUnitSphere * distance; 
+
+        randomDirection += origin;
+        
+        NavMeshHit navHit;
+
+        NavMesh.SamplePosition(randomDirection, out navHit, distance, layerMask);
+
+        return navHit.position;
+    }
+
 }

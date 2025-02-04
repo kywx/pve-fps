@@ -161,7 +161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7385695697837570124, guid: 4d2ff746307bb9948918f11c48952499, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.22
+      value: -11.02
       objectReference: {fileID: 0}
     - target: {fileID: 7385695697837570124, guid: 4d2ff746307bb9948918f11c48952499, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1240,7 +1240,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.44
-  m_Speed: 1.63
+  m_Speed: 1.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1266,6 +1266,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemy: {fileID: 2134445257}
   _target: {fileID: 2107292183}
+  _chaseSpeed: 2
+  _wanderSpeed: 1.5
+  _chaseRange: 8
+  _wanderRadius: 10
+  _wanderTimer: 1
 --- !u!1001 &5319715044335550519
 PrefabInstance:
   m_ObjectHideFlags: 0
