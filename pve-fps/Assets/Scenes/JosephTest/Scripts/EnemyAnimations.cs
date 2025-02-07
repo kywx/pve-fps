@@ -15,4 +15,10 @@ public class EnemyAnimations : MonoBehaviour
     {
         
     }
+
+    public void HandleMovementState(int state)
+    {
+        _animator.SetInteger("MovementState", state);
+    }
+
 }
