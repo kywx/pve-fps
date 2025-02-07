@@ -1,8 +1,19 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    public Image StaminaBar;
+    public float currentStamina, maxStamina;
+    public float runCost;
+    public float jumpCost;
+    public float staminaRegenRate;
+    
+    private Coroutine staminaRegen;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [Header("Movement")]
     private float movementSpeed;
@@ -39,22 +50,69 @@ public class PlayerMovement : MonoBehaviour
         Air
     }
 
+    private void reduceStamina() {
+        float cost = 0;
+        if (state == MovementState.Sprinting) {
+            cost = runCost;
+        } else if (state == MovementState.Air) {
+            cost = jumpCost;
+        }
+
+        currentStamina -= cost * Time.deltaTime; // decrease stamina when sprinting
+        if (currentStamina <= 0) {
+            currentStamina = 0;
+            movementSpeed = walkSpeed;
+        }
+        StaminaBar.fillAmount = currentStamina / maxStamina;
+    }
+
+    private IEnumerator RegenStamina() {
+        yield return new WaitForSeconds(1);
+        while (currentStamina < maxStamina) {
+            currentStamina += staminaRegenRate / 10f; // increase stamina when not sprinting. We divide by 10 due to the 0.1f wait time. This ensures that the stamina regen rate is 'per second'
+            if (currentStamina > maxStamina) {
+                currentStamina = maxStamina;
+            }
+            StaminaBar.fillAmount = currentStamina / maxStamina;
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
     private void StateHandler() {
         // check if the player is grounded, sprinting, or in the air
         if(isGrounded && Input.GetKey(sprintKey)) {
+            // Change the state to sprinting and set the movement speed to sprint speed
             state = MovementState.Sprinting;
             movementSpeed = sprintSpeed;
+            reduceStamina();
         } else if (!isGrounded) {
             state = MovementState.Air;
+            reduceStamina();
         } else {
             state = MovementState.Walking;
             movementSpeed = walkSpeed;
+            reduceStamina();
         }
+        
+        // Stamina regeneration logic
+        if (state == MovementState.Sprinting || state == MovementState.Air) {
+            if (staminaRegen != null) {
+                StopCoroutine(staminaRegen);
+                staminaRegen = null;
+            }
+        } else {
+            if (staminaRegen == null) {
+                staminaRegen = StartCoroutine(RegenStamina());
+            }
+        }
+        
+
+        
     }
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        currentStamina = maxStamina;
     }
 
     private void MyInput() {
