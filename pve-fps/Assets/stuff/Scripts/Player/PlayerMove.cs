@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerMotor : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
     private CharacterController controller;
     private ParticleSystem part;

@@ -1,39 +1,39 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InputManager : MonoBehaviour
+public class ActionManager : MonoBehaviour
 {
-    private PlayerInput playerInput;
-    public PlayerInput.OnFootActions onFoot;
+    private PlayerAction playerAction;
+    public PlayerAction.OnFootActions onFoot;
     private Vector2 movementInput;
 
-    private PlayerMotor motor;
-    private PlayerLook look;
+    private PlayerMove p_move;
+    private PlayerCam p_cam;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        playerInput = new PlayerInput();
-        onFoot = playerInput.OnFoot;
+        playerAction = new PlayerAction();
+        onFoot = playerAction.OnFoot;
 
-        motor = GetComponent<PlayerMotor>();
-        look = GetComponent<PlayerLook>();
+        p_move = GetComponent<PlayerMove>();
+        p_cam = GetComponent<PlayerCam>();
 
-        onFoot.Jump.performed += ctx => motor.Jump();
+        onFoot.Jump.performed += ctx => p_move.Jump();
 
-        onFoot.Sprint.performed += ctx => motor.Sprint();
-        onFoot.Sprint.canceled += ctx => motor.SprintOff();
+        onFoot.Sprint.performed += ctx => p_move.Sprint();
+        onFoot.Sprint.canceled += ctx => p_move.SprintOff();
 
         //onFoot.ToggleHairdryer.performed += ctx => motor.Hairdry();  // for click logic
 
         // for on hold/release logic
-        onFoot.ToggleHairdryer.performed += ctx => motor.HairdryON();
-        onFoot.ToggleHairdryer.canceled += ctx => motor.HairdryOFF();
+        onFoot.ToggleHairdryer.performed += ctx => p_move.HairdryON();
+        onFoot.ToggleHairdryer.canceled += ctx => p_move.HairdryOFF();
     }
 
     private void Update()
     {
         // tell the playermotor to move using the value fm our movement action
-        motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
+        p_move.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
     }
 
     // Update is called once per frame
@@ -45,7 +45,7 @@ public class InputManager : MonoBehaviour
 
     private void LateUpdate()
     {
-        look.ProcessLook(onFoot.Look.ReadValue<Vector2>());
+        p_cam.ProcessLook(onFoot.Look.ReadValue<Vector2>());
 
     }
 
