@@ -3,6 +3,12 @@ using UnityEngine;
 public abstract class Interactable : MonoBehaviour
 {
     public string promptMessage;
+    public GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.FindWithTag("Player");
+    }
 
     public void BaseInteract()
     {
