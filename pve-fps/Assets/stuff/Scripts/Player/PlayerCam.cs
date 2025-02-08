@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerLook : MonoBehaviour
+public class PlayerCam : MonoBehaviour
 {
     public Camera cam;
     private float xRotation = 0f;
