@@ -10,12 +10,15 @@ public class PlayerInteract : MonoBehaviour
     private PlayerUI playerUI;
     private ActionManager actionManager;
 
+    private int myHats;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         cam = GetComponent<PlayerCam>().cam;
         playerUI = GetComponent<PlayerUI>();
         actionManager = GetComponent<ActionManager>();
+
+        myHats = 0;
     }
 
     // Update is called once per frame
@@ -26,7 +29,7 @@ public class PlayerInteract : MonoBehaviour
         Ray ray = new Ray(cam.transform.position, cam.transform.forward);
         Debug.DrawRay(ray.origin, ray.direction * distance);
         RaycastHit hitInfo;  // collision info
-        if (Physics.Raycast(ray, out hitInfo, distance, mask))  // out -> return
+        if (Physics.Raycast(ray, out hitInfo, distance, mask))  // out -> return info to hitInfo
         {
             // check if object hit is interactable
             if (hitInfo.collider.GetComponent<Interactable>() != null)
@@ -36,7 +39,13 @@ public class PlayerInteract : MonoBehaviour
                 playerUI.UpdateText(interactable.promptMessage);
                 if (actionManager.onFoot.Interact.triggered)
                 {
-                    interactable.BaseInteract();  // interact function
+                    // if the interactable is HatCollection, then update hats
+                    if (interactable is HatCollection)
+                    {
+                        myHats++;
+                        playerUI.UpdateHatScore(myHats);
+                    }
+                    interactable.BaseInteract();  // base interact, may delete so always call last
                 }
             }
         }
