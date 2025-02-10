@@ -21,6 +21,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] float _wanderSpeed;
 
     [SerializeField] float _chaseRange;
+    [SerializeField] float _knockback;
     [SerializeField] float _wanderRadius;
     [SerializeField] float _wanderTimer;
 
@@ -90,6 +91,14 @@ void Update()
         NavMesh.SamplePosition(randomDirection, out navHit, distance, layerMask);
 
         return navHit.position;
+    }
+
+    private void OnCollisionEnter(Collision other) 
+    {
+        if (other.gameObject.tag == "Player")   
+        {
+            other.transform.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * _knockback, ForceMode.Impulse);
+        }
     }
 
 }

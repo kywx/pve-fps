@@ -301,6 +301,7 @@ MonoBehaviour:
   _chaseSpeed: 2.5
   _wanderSpeed: 1.5
   _chaseRange: 10
+  _knockback: 80
   _wanderRadius: 15
   _wanderTimer: 1.5
 --- !u!114 &4823331578830040734
