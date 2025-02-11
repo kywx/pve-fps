@@ -827,7 +827,7 @@ MonoBehaviour:
   _playerHeight: 1
   _ground:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 0
   _orientation: {fileID: 1757049195}
 --- !u!136 &2107292187
 CapsuleCollider:
