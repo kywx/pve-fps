@@ -34,15 +34,17 @@ public class EnemyHat : MonoBehaviour
         //Vector3 currentPosition = transform.position;
        
         
-
+        if (_hat.IsChildOf(transform))
+        {
         //_hat.position = currentPosition;
-        _hat.SetParent(null);
-        _hatRB.freezeRotation = false;
-        _hat.GetComponent<HingeJoint>().breakForce = _hatForce / 2f;
-        _hatRB.AddForce(Vector3.up * _hatForce, ForceMode.Force);
+            transform.DetachChildren();
+            _hatRB.freezeRotation = false;
+            _hat.GetComponent<HingeJoint>().breakForce = _hatForce / 2f;
+            _hatRB.AddForce(Vector3.up * _hatForce, ForceMode.Force);
 
         
-        Invoke("DestroyHat", _hatLifetime);
+            Invoke("DestroyHat", _hatLifetime);
+        }
         
 
 
