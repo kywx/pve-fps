@@ -8,6 +8,12 @@ public class PlayerCam : MonoBehaviour
     public float xSens = 30f;
     public float ySens = 30f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     public void ProcessLook(Vector2 input)
     {
         float mouseX = input.x;
