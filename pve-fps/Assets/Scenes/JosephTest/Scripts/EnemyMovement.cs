@@ -58,6 +58,7 @@ void FixedUpdate()
         }
 
        // _animation.HandleMovementState((int)_movementState);
+       transform.LookAt(_target);
     }
 
     private void HandleChase()

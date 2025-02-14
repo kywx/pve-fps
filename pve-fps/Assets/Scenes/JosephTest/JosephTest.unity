@@ -119,6 +119,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &358257991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5393672293355097764, guid: a228f48764704d940ac16c19e7614a48, type: 3}
+  m_PrefabInstance: {fileID: 8635019019240129207}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &358257992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358257991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9339de3bba974004c9835daa13f9b70d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hat: {fileID: 2118201740}
+  _stats: {fileID: 11400000, guid: 833da8146137e564f9fedeebc63cd897, type: 2}
 --- !u!1 &760213521
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,6 +871,39 @@ CapsuleCollider:
   m_Height: 1.7312224
   m_Direction: 1
   m_Center: {x: -0.18, y: 0.19110703, z: 0.04617184}
+--- !u!1 &2118201733 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 980711682876282221, guid: a228f48764704d940ac16c19e7614a48, type: 3}
+  m_PrefabInstance: {fileID: 8635019019240129207}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &2118201734 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 8525751684447561126, guid: a228f48764704d940ac16c19e7614a48, type: 3}
+  m_PrefabInstance: {fileID: 8635019019240129207}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2118201739 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1022902281014990322, guid: a228f48764704d940ac16c19e7614a48, type: 3}
+  m_PrefabInstance: {fileID: 8635019019240129207}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2118201740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118201733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66512f2f71f3b3343855cd960aee9dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hat: {fileID: 2118201739}
+  _hatRB: {fileID: 2118201734}
+  _enemy: {fileID: 358257991}
+  _hatForce: 5
+  _hatLifetime: 10
+  _maxSpeed: 15
 --- !u!1 &2130756051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,6 +1098,10 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 2107292183}
+    - target: {fileID: 787002524772931396, guid: a228f48764704d940ac16c19e7614a48, type: 3}
+      propertyPath: _knockback
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2237565529928021589, guid: a228f48764704d940ac16c19e7614a48, type: 3}
       propertyPath: m_Constraints
       value: 126
@@ -1094,6 +1150,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5284905826485173353, guid: a228f48764704d940ac16c19e7614a48, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284905826485173353, guid: a228f48764704d940ac16c19e7614a48, type: 3}
+      propertyPath: _hatLifetime
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5393672293355097764, guid: a228f48764704d940ac16c19e7614a48, type: 3}
       propertyPath: m_Name
       value: EnemyDiamond
@@ -1105,7 +1169,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5393672293355097764, guid: a228f48764704d940ac16c19e7614a48, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 358257992}
+    - targetCorrespondingSourceObject: {fileID: 980711682876282221, guid: a228f48764704d940ac16c19e7614a48, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2118201740}
   m_SourcePrefab: {fileID: 100100000, guid: a228f48764704d940ac16c19e7614a48, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

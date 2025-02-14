@@ -4,6 +4,8 @@ public class EnemyHat : MonoBehaviour
 {
     [SerializeField] Transform _hat;
     [SerializeField] Rigidbody _hatRB;
+
+    [SerializeField] GameObject _enemy;
     [SerializeField] float _hatForce;
     [SerializeField] float _hatLifetime;
     [SerializeField] float _maxSpeed;
@@ -34,13 +36,13 @@ public class EnemyHat : MonoBehaviour
         //Vector3 currentPosition = transform.position;
        
         
-        if (_hat.IsChildOf(transform))
+        if (_enemy != null && _hat.IsChildOf(_enemy.transform))
         {
         //_hat.position = currentPosition;
-            transform.DetachChildren();
+            _enemy.transform.DetachChildren();
             _hatRB.freezeRotation = false;
             _hat.GetComponent<HingeJoint>().breakForce = _hatForce / 2f;
-            _hatRB.AddForce(Vector3.up * _hatForce, ForceMode.Force);
+            _hatRB.AddRelativeForce(Vector3.up * _hatForce, ForceMode.Force);
 
         
             Invoke("DestroyHat", _hatLifetime);
@@ -58,15 +60,16 @@ public class EnemyHat : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) 
     {
-        if (other.gameObject.CompareTag("Player"))
+       /* if (other.gameObject.CompareTag("Player"))
         {
             LaunchHat();
         }
-
-        if (other.gameObject.CompareTag("Ground"))
+        */
+       /* if (other.gameObject.CompareTag("Ground") && transform.parent == null)
         {
             Invoke("DestroyHat", _hatLifetime/2);
         }
+        */
     }
 
     
