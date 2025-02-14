@@ -106,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4161930891770659267, guid: ef7138f036ab93a4b8ee4fec3d1776bd, type: 3}
       propertyPath: m_CollisionDetection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4463177249231539958, guid: ef7138f036ab93a4b8ee4fec3d1776bd, type: 3}
       propertyPath: m_Name
@@ -167,34 +167,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4463177249231539958, guid: ef7138f036ab93a4b8ee4fec3d1776bd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7065851152947243284}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef7138f036ab93a4b8ee4fec3d1776bd, type: 3}
---- !u!1 &980711682876282221 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4463177249231539958, guid: ef7138f036ab93a4b8ee4fec3d1776bd, type: 3}
-  m_PrefabInstance: {fileID: 3489256290321406875}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7065851152947243284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 980711682876282221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66512f2f71f3b3343855cd960aee9dfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hat: {fileID: 1022902281014990322}
-  _hatRB: {fileID: 8525751684447561126}
-  _enemy: {fileID: 5393672293355097764}
-  _hatForce: 5
-  _hatLifetime: 10
-  _maxSpeed: 15
 --- !u!4 &1022902281014990322 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4494100051071749737, guid: ef7138f036ab93a4b8ee4fec3d1776bd, type: 3}
@@ -424,9 +398,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e761c92748f070c4684722a51400c3b1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7944802012948362989}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e761c92748f070c4684722a51400c3b1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5225602521185410004}
   m_SourcePrefab: {fileID: 100100000, guid: e761c92748f070c4684722a51400c3b1, type: 3}
 --- !u!4 &4724835605282575390 stripped
 Transform:
@@ -463,7 +434,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &2683077320784206523
 BoxCollider:
@@ -525,7 +496,7 @@ MonoBehaviour:
   _chaseSpeed: 2.5
   _wanderSpeed: 1.5
   _chaseRange: 10
-  _knockback: 10
+  _knockback: 80
   _wanderRadius: 15
   _wanderTimer: 1.5
 --- !u!114 &5284905826485173353
@@ -535,16 +506,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5393672293355097764}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66512f2f71f3b3343855cd960aee9dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _hat: {fileID: 1022902281014990322}
   _hatRB: {fileID: 8525751684447561126}
-  _enemy: {fileID: 5393672293355097764}
   _hatForce: 5
-  _hatLifetime: 10
+  _hatLifetime: 30
   _maxSpeed: 15
 --- !u!212 &7944802012948362989
 SpriteRenderer:
@@ -601,17 +571,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5225602521185410004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5393672293355097764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9339de3bba974004c9835daa13f9b70d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hat: {fileID: 7065851152947243284}
-  _stats: {fileID: 11400000, guid: 833da8146137e564f9fedeebc63cd897, type: 2}
