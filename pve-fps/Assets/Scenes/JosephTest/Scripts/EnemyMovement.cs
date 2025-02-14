@@ -10,7 +10,7 @@ public enum MovementState
 public class EnemyMovement : MonoBehaviour
 {
     //gotta make this use an event in the future
-    [SerializeField] EnemyAnimations _animation;
+   // [SerializeField] EnemyAnimations _animation;
     private MovementState _movementState;
     [SerializeField] NavMeshAgent _enemy;
 
@@ -34,7 +34,7 @@ private void Start()
     _enemy.speed = _wanderSpeed;
 }    
 
-void Update()
+void FixedUpdate()
     {
         // changes action based off of state
         if (_movementState == MovementState.Wander)
@@ -57,7 +57,8 @@ void Update()
             _movementState = MovementState.Wander;
         }
 
-        _animation.HandleMovementState((int)_movementState);
+       // _animation.HandleMovementState((int)_movementState);
+       transform.LookAt(_target);
     }
 
     private void HandleChase()
