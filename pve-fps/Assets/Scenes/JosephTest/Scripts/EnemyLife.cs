@@ -6,9 +6,11 @@ public class EnemyLife : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private EnemyHat _hat;
     [SerializeField] EnemyStats _stats;
+
+    private float _health;
     void Start()
     {
-        _stats.health = 30;
+        _health = _stats.health;
     }
 
     // Update is called once per frame
@@ -19,8 +21,8 @@ public class EnemyLife : MonoBehaviour
 
     public void TakeDamage(float dmg)
     {
-        _stats.health -= dmg;
-        if (_stats.health <= 0)
+        _health -= dmg;
+        if (_health <= 0)
         {
             Die();
         }
