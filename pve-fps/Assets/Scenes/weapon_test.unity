@@ -766,6 +766,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &348613957 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 980711682876282221, guid: a228f48764704d940ac16c19e7614a48, type: 3}
+  m_PrefabInstance: {fileID: 1765779620}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &348613964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348613957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a50fcd489afc7b64599294ad194ebfe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: Pick Up
 --- !u!1 &419914507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2589,7 +2607,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1702541150
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2720,6 +2738,10 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 1551187977}
+    - target: {fileID: 980711682876282221, guid: a228f48764704d940ac16c19e7614a48, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4724835605282575390, guid: a228f48764704d940ac16c19e7614a48, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.9938296
@@ -2775,6 +2797,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5393672293355097764, guid: a228f48764704d940ac16c19e7614a48, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1765779623}
+    - targetCorrespondingSourceObject: {fileID: 980711682876282221, guid: a228f48764704d940ac16c19e7614a48, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 348613964}
   m_SourcePrefab: {fileID: 100100000, guid: a228f48764704d940ac16c19e7614a48, type: 3}
 --- !u!1 &1765779621 stripped
 GameObject:
@@ -3166,7 +3191,7 @@ GameObject:
   - component: {fileID: 2052237124}
   - component: {fileID: 2052237126}
   - component: {fileID: 2052237125}
-  - component: {fileID: 2052237127}
+  - component: {fileID: 2052237128}
   m_Layer: 0
   m_Name: Wind
   m_TagString: Weapon
@@ -7029,7 +7054,7 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
@@ -7989,20 +8014,19 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!114 &2052237127
+--- !u!114 &2052237128
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052237123}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e937a0bee1438d4d96e1f4c212b5010, type: 3}
+  m_Script: {fileID: 11500000, guid: 261fa498365754f45b6d926cf5966fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  part: {fileID: 2052237126}
-  forceMultiplier: 3
+  weaponDamage: 10
 --- !u!20 &2129713496 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 3842243095639016228, guid: de5ec2e3d64f93146b3c8126605463d4, type: 3}
