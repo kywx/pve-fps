@@ -112,6 +112,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyHat
       objectReference: {fileID: 0}
+    - target: {fileID: 4463177249231539958, guid: ef7138f036ab93a4b8ee4fec3d1776bd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4494100051071749737, guid: ef7138f036ab93a4b8ee4fec3d1776bd, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.6608046
@@ -167,8 +171,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4463177249231539958, guid: ef7138f036ab93a4b8ee4fec3d1776bd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5669637035536440052}
   m_SourcePrefab: {fileID: 100100000, guid: ef7138f036ab93a4b8ee4fec3d1776bd, type: 3}
+--- !u!1 &980711682876282221 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4463177249231539958, guid: ef7138f036ab93a4b8ee4fec3d1776bd, type: 3}
+  m_PrefabInstance: {fileID: 3489256290321406875}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5669637035536440052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980711682876282221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a50fcd489afc7b64599294ad194ebfe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: Pick Up
 --- !u!4 &1022902281014990322 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4494100051071749737, guid: ef7138f036ab93a4b8ee4fec3d1776bd, type: 3}
@@ -193,15 +218,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e761c92748f070c4684722a51400c3b1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.037144
+      value: 1.9938296
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e761c92748f070c4684722a51400c3b1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.02
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e761c92748f070c4684722a51400c3b1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.02
+      value: 6.484661
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e761c92748f070c4684722a51400c3b1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -398,6 +423,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e761c92748f070c4684722a51400c3b1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7944802012948362989}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e761c92748f070c4684722a51400c3b1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8074458116766103911}
   m_SourcePrefab: {fileID: 100100000, guid: e761c92748f070c4684722a51400c3b1, type: 3}
 --- !u!4 &4724835605282575390 stripped
 Transform:
@@ -513,6 +541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hat: {fileID: 1022902281014990322}
   _hatRB: {fileID: 8525751684447561126}
+  _enemy: {fileID: 5393672293355097764}
   _hatForce: 5
   _hatLifetime: 30
   _maxSpeed: 15
@@ -571,3 +600,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8074458116766103911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5393672293355097764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9339de3bba974004c9835daa13f9b70d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hat: {fileID: 5284905826485173353}
+  _stats: {fileID: 11400000, guid: 833da8146137e564f9fedeebc63cd897, type: 2}
+  _health: 0
