@@ -32,6 +32,7 @@ private void Start()
     _timer = _wanderTimer;
     _movementState = MovementState.Wander;
     _enemy.speed = _wanderSpeed;
+    _target = GameObject.FindWithTag("Player").transform;
 }    
 
 void FixedUpdate()
@@ -98,7 +99,7 @@ void FixedUpdate()
     {
         if (other.gameObject.tag == "Player")   
         {
-            other.transform.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * _knockback, ForceMode.Impulse);
+            other.transform.GetComponent<Rigidbody>().AddRelativeForce(transform.forward.normalized * -1 * _knockback, ForceMode.Impulse);
         }
     }
 
