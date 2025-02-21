@@ -1315,23 +1315,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfdca92a2305d76439760588c2f682ef, type: 3}
---- !u!1 &1048586988 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7615351789689055810, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
-  m_PrefabInstance: {fileID: 7180539559366615156}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1048586993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1048586988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab075aa0b7eb9884da5218015582eaec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1064232265
 GameObject:
   m_ObjectHideFlags: 0
@@ -2698,45 +2681,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1439154993954829003, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
-      propertyPath: weaponDamage
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2620243725505828499, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
       propertyPath: m_Name
       value: Player 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2683980893899529144, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
-      propertyPath: ShapeModule.m_Scale.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2683980893899529144, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
-      propertyPath: ShapeModule.m_Scale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2683980893899529144, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
-      propertyPath: VelocityModule.z.scalar
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2683980893899529144, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
-      propertyPath: ClampVelocityModule.dampen
-      value: 0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 2683980893899529144, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2683980893899529144, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2683980893899529144, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2683980893899529144, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
-      propertyPath: CollisionModule.m_EnergyLossOnCollision.scalar
-      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 3535353047531691531, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2778,14 +2725,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4440399203045282552, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6410581310461475133, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.95
-      objectReference: {fileID: 0}
     - target: {fileID: 8677677751273743933, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
       propertyPath: hatScore
       value: 
@@ -2797,10 +2736,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7615351789689055810, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1048586993}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

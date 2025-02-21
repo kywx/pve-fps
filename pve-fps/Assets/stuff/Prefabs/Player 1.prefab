@@ -233,7 +233,7 @@ Transform:
   m_GameObject: {fileID: 5629396154878024488}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: 0.46}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -355,6 +355,7 @@ GameObject:
   - component: {fileID: 2683980893899529144}
   - component: {fileID: 8927638092149084251}
   - component: {fileID: 1439154993954829003}
+  - component: {fileID: 4685629811007234106}
   m_Layer: 0
   m_Name: Wind
   m_TagString: Weapon
@@ -371,7 +372,7 @@ Transform:
   m_GameObject: {fileID: 7615351789689055810}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0935173, y: -0.049319863, z: 0.634}
+  m_LocalPosition: {x: 0.0935173, y: -0.049319863, z: 0.95}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -460,7 +461,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.2
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1016,7 +1017,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 1.5, y: 1, z: 1}
+    m_Scale: {x: 1.5, y: 1.5, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -4081,7 +4082,7 @@ ParticleSystem:
     m_EnergyLossOnCollision:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.85
+      scalar: 0.9
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5189,4 +5190,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261fa498365754f45b6d926cf5966fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponDamage: 10
+  weaponDamage: 3
+--- !u!114 &4685629811007234106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7615351789689055810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab075aa0b7eb9884da5218015582eaec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
