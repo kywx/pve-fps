@@ -527,6 +527,7 @@ MonoBehaviour:
   _knockback: 80
   _wanderRadius: 15
   _wanderTimer: 1.5
+  _stats: {fileID: 11400000, guid: 8074ec69c2fc2f1499e714d294cdc05a, type: 2}
 --- !u!114 &5284905826485173353
 MonoBehaviour:
   m_ObjectHideFlags: 0
