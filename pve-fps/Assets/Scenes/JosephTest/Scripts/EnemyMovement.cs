@@ -36,6 +36,7 @@ private void Start()
     _enemy.speed = _wanderSpeed;
     _target = GameObject.FindWithTag("Player").transform;
     _chaseSpeed = _stats.chaseSpeed;
+    _knockback = _stats.knockback;
 }    
 
 void FixedUpdate()
@@ -102,8 +103,17 @@ void FixedUpdate()
     {
         if (other.gameObject.tag == "Player")   
         {
-            other.transform.GetComponent<Rigidbody>().AddRelativeForce(transform.forward.normalized * -1 * _knockback, ForceMode.Impulse);
+            other.transform.GetComponent<Rigidbody>().AddForce(transform.forward * -1 * _knockback, ForceMode.Impulse);
+            //other.gameObject.GetComponent<CharacterController>().Move(transform.forward * -1 * _knockback * Time.deltaTime);
         }
+    }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        Transform particleDirection = other.transform;
+        
+        GetComponent<Rigidbody>().AddForce(particleDirection.forward * _stats.knockbackToEnemy);
+        
     }
 
 }

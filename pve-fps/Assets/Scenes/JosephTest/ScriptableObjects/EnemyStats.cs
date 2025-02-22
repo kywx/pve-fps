@@ -7,4 +7,6 @@ public class EnemyStats : ScriptableObject
     public float chaseSpeed;
     public float knockback;
 
+    public float knockbackToEnemy;
+
 }

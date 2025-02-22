@@ -15,3 +15,4 @@ MonoBehaviour:
   health: 150
   chaseSpeed: 1.5
   knockback: 90
+  knockbackToEnemy: 10
