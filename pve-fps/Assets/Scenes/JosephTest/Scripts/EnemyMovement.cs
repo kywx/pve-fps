@@ -25,6 +25,8 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] float _wanderRadius;
     [SerializeField] float _wanderTimer;
 
+    [SerializeField] EnemyStats _stats;
+
     private float _timer;
 
 private void Start() 
@@ -33,6 +35,7 @@ private void Start()
     _movementState = MovementState.Wander;
     _enemy.speed = _wanderSpeed;
     _target = GameObject.FindWithTag("Player").transform;
+    _chaseSpeed = _stats.chaseSpeed;
 }    
 
 void FixedUpdate()

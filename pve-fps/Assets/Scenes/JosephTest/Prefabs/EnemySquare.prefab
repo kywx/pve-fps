@@ -286,7 +286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e761c92748f070c4684722a51400c3b1, type: 3}
       propertyPath: m_Name
-      value: EnemyDiamond
+      value: EnemySquare
       objectReference: {fileID: 0}
     - target: {fileID: 2384422517028492611, guid: e761c92748f070c4684722a51400c3b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -527,7 +527,7 @@ MonoBehaviour:
   _knockback: 80
   _wanderRadius: 15
   _wanderTimer: 1.5
-  _stats: {fileID: 11400000, guid: 833da8146137e564f9fedeebc63cd897, type: 2}
+  _stats: {fileID: 11400000, guid: 8074ec69c2fc2f1499e714d294cdc05a, type: 2}
 --- !u!114 &5284905826485173353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,7 +590,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9d218d23e786e8846aea84ad5d42e1ba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 61bf1b947b710a643b96fb46fe336d40, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -614,5 +614,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hat: {fileID: 5284905826485173353}
-  _stats: {fileID: 11400000, guid: 833da8146137e564f9fedeebc63cd897, type: 2}
+  _stats: {fileID: 11400000, guid: 8074ec69c2fc2f1499e714d294cdc05a, type: 2}
   _health: 0
