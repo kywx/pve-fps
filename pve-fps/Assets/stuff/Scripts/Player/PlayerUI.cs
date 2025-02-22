@@ -21,6 +21,6 @@ public class PlayerUI : MonoBehaviour
 
     public void UpdateHatScore(int hats)
     {
-        hatScore.text = "Hats x" + hats;
+        hatScore.text = "Hats: " + hats;
     }
 }
