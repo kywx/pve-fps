@@ -808,10 +808,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2683980893899529144, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
-      propertyPath: CollisionModule.colliderForce
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 3535353047531691531, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.05
@@ -851,18 +847,6 @@ PrefabInstance:
     - target: {fileID: 3535353047531691531, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3842243095639016228, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0.18490559
-      objectReference: {fileID: 0}
-    - target: {fileID: 3842243095639016228, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0.030518986
-      objectReference: {fileID: 0}
-    - target: {fileID: 3842243095639016228, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0.028956898
       objectReference: {fileID: 0}
     - target: {fileID: 8677677751273743933, guid: f6cfa1242cee03d40ac4ac651b0667dd, type: 3}
       propertyPath: hatScore
