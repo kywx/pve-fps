@@ -38,13 +38,14 @@ public class EnemyHat : MonoBehaviour
         
         if (_enemy != null && _hat.IsChildOf(_enemy.transform))
         {
-        //_hat.position = currentPosition;
+            //_hat.position = currentPosition;
+            _hatRB.GetComponent<BoxCollider>().enabled = true;
             _enemy.transform.DetachChildren();
             _hatRB.freezeRotation = false;
             _hat.GetComponent<HingeJoint>().breakForce = _hatForce / 2f;
             _hatRB.AddRelativeForce(Vector3.up * _hatForce, ForceMode.Force);
 
-        
+
             Invoke("DestroyHat", _hatLifetime);
         }
         

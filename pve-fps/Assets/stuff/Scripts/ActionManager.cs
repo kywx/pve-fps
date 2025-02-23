@@ -36,13 +36,6 @@ public class ActionManager : MonoBehaviour
         p_move.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
     }
 
-    // Update is called once per frame
-    //void FixedUpdate()
-    //{
-    //    // tell the playermotor to move using the value fm our movement action
-    //    motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
-    //}
-
     private void LateUpdate()
     {
         p_cam.ProcessLook(onFoot.Look.ReadValue<Vector2>());

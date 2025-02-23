@@ -103,8 +103,9 @@ void FixedUpdate()
     {
         if (other.gameObject.tag == "Player")   
         {
-            other.transform.GetComponent<Rigidbody>().AddForce(transform.forward * -1 * _knockback, ForceMode.Impulse);
+            //other.transform.GetComponent<Rigidbody>().AddForce(transform.forward * -1 * _knockback, ForceMode.Impulse);
             //other.gameObject.GetComponent<CharacterController>().Move(transform.forward * -1 * _knockback * Time.deltaTime);
+            //Debug.Log(transform.forward * -1 * _knockback * Time.deltaTime);
         }
     }
 

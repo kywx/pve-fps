@@ -2,36 +2,83 @@ using UnityEngine;
 
 public class PlayerColliding : MonoBehaviour
 {
-    // i don't know if im actually using this script
-    // add collison effect to player because character controller and not rigidbody
-    // this script pushes all rigidbodies that the character touches
-    public CharacterController characterController;
+    private CharacterController characterController;
     public float pushPower = 2.0f;
-    void OnControllerColliderHit(ControllerColliderHit hit)
+    public float pushRecieve = 5.0f;
+    public float mass = 10.0f;
+    private Vector3 pushVelocity;
+
+    private void Start()
     {
-        Rigidbody body = hit.collider.attachedRigidbody;
+        pushVelocity = Vector3.zero;
+        characterController = GetComponent<CharacterController>();
+    }
 
-        // no rigidbody
-        if (body == null || body.isKinematic)
+    private void Update()
+    {
+        if (pushVelocity != Vector3.zero)
         {
-            return;
+            characterController.Move(pushVelocity * Time.deltaTime);
+            // reduce, if negative, go to zero
+            if (pushVelocity.x != 0)
+            {
+                pushVelocity.x -= mass * Time.deltaTime;
+            }
+            if (pushVelocity.y != 0)
+            {
+                pushVelocity.y -= mass/2 * Time.deltaTime;
+            }
+            if (pushVelocity.z != 0)
+            {
+                pushVelocity.z -= mass * Time.deltaTime;
+            }
+            
+            if (pushVelocity.x < 0)
+            {
+                pushVelocity.x = 0;
+            }
+            if (pushVelocity.y < 0)
+            {
+                pushVelocity.y = 0;
+            }
+            if (pushVelocity.z < 0)
+            {
+                pushVelocity.z = 0;
+            }
+            Debug.Log(pushVelocity);
         }
+    }
 
-        // We dont want to push objects below us
-        if (hit.moveDirection.y < -0.3)
+    //void OnControllerColliderHit(ControllerColliderHit hit)
+    //{
+    //    // add collison effect so player can push objects
+    //    Rigidbody body = hit.collider.attachedRigidbody;
+
+    //    // no rigidbody
+    //    if (body == null || body.isKinematic)
+    //    {
+    //        return;
+    //    }
+
+    //    // We dont want to push objects below us
+    //    if (hit.moveDirection.y < -0.3)
+    //    {
+    //        return;
+    //    }
+    //    Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
+    //    body.AddForce(pushDir * pushPower);
+    //}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        // only if enemy 
+        if (collision.gameObject.tag == "Enemy")
         {
-            return;
+            Vector3 mask = new Vector3(1,0.3f,1);  // less vertical force
+            Vector3 pushDir = Vector3.Scale(collision.transform.forward, mask);
+            pushVelocity = pushDir * pushRecieve * 3.0f;
+            Debug.Log(pushVelocity);
+
         }
-
-        // Calculate push direction from move direction,
-        // we only push objects to the sides never up and down
-        Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
-
-        // If you know how fast your character is trying to move,
-        // then you can also multiply the push velocity by that.
-
-        // Apply the push
-        //body.velocity = pushDir * pushPower;   // velocity is obsolete or something
-        body.AddForce(pushDir * pushPower);
     }
 }
