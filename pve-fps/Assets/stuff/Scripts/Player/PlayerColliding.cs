@@ -22,15 +22,15 @@ public class PlayerColliding : MonoBehaviour
             // reduce, if negative, go to zero
             if (pushVelocity.x != 0)
             {
-                pushVelocity.x -= mass * Time.deltaTime;
+                pushVelocity.x -= 2* mass * Time.deltaTime;
             }
             if (pushVelocity.y != 0)
             {
-                pushVelocity.y -= mass/2 * Time.deltaTime;
+                pushVelocity.y -= mass * Time.deltaTime;
             }
             if (pushVelocity.z != 0)
             {
-                pushVelocity.z -= mass * Time.deltaTime;
+                pushVelocity.z -= 2 * mass * Time.deltaTime;
             }
             
             if (pushVelocity.x < 0)
