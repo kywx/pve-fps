@@ -72,6 +72,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4010781540379588214}
     m_Modifications:
+    - target: {fileID: -7920401985988103925, guid: ef7138f036ab93a4b8ee4fec3d1776bd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -6241636062022670395, guid: ef7138f036ab93a4b8ee4fec3d1776bd, type: 3}
       propertyPath: m_Anchor.x
       value: 0
@@ -218,15 +222,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e761c92748f070c4684722a51400c3b1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.9938296
+      value: -23.259293
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e761c92748f070c4684722a51400c3b1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.96
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e761c92748f070c4684722a51400c3b1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.484661
+      value: -16.588947
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e761c92748f070c4684722a51400c3b1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -286,7 +290,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e761c92748f070c4684722a51400c3b1, type: 3}
       propertyPath: m_Name
-      value: EnemySquare
+      value: EnemyDiamond
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e761c92748f070c4684722a51400c3b1, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 2384422517028492611, guid: e761c92748f070c4684722a51400c3b1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -483,7 +491,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.71600044, y: 1.9534805, z: 2.5251665}
+  m_Size: {x: 1, y: 1.9534805, z: 8}
   m_Center: {x: 0.009459794, y: 1.0734471, z: -0.19370545}
 --- !u!195 &7397505022440215297
 NavMeshAgent:
@@ -494,7 +502,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 5393672293355097764}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.44
+  m_Radius: 0.8
   m_Speed: 1.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -521,13 +529,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemy: {fileID: 7397505022440215297}
   _target: {fileID: 0}
-  _chaseSpeed: 2.5
+  _chaseSpeed: 3
   _wanderSpeed: 1.5
   _chaseRange: 10
   _knockback: 80
   _wanderRadius: 15
   _wanderTimer: 1.5
-  _stats: {fileID: 11400000, guid: 8074ec69c2fc2f1499e714d294cdc05a, type: 2}
+  _stats: {fileID: 11400000, guid: 833da8146137e564f9fedeebc63cd897, type: 2}
 --- !u!114 &5284905826485173353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,7 +598,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 61bf1b947b710a643b96fb46fe336d40, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d218d23e786e8846aea84ad5d42e1ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -614,5 +622,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hat: {fileID: 5284905826485173353}
-  _stats: {fileID: 11400000, guid: 8074ec69c2fc2f1499e714d294cdc05a, type: 2}
+  _stats: {fileID: 11400000, guid: 833da8146137e564f9fedeebc63cd897, type: 2}
   _health: 0
