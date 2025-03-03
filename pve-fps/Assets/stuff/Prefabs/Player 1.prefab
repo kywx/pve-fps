@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 559241921934495109}
   - component: {fileID: 8677677751273743933}
   - component: {fileID: 3365433576431143415}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player 1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -143,9 +143,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2527d52c334fec14488da85d3284f9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hairdryerStart: {fileID: 0}
+  hairdryerLoop: {fileID: 0}
+  hairdryerEnd: {fileID: 0}
   speed: 5
   gravity: -15
-  jumpHeight: 1.3
+  jumpHeight: 1.4
 --- !u!114 &2431852490010418485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,8 +162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 3842243095639016228}
-  xSens: 30
-  ySens: 30
+  xSens: 20
+  ySens: 20
 --- !u!114 &559241921934495109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,8 +207,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pushPower: 2
-  pushRecieve: 20
-  mass: 10
+  pushRecieve: 8
+  mass: 5
 --- !u!1 &5629396154878024488
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +221,7 @@ GameObject:
   - component: {fileID: 3842243095639016228}
   - component: {fileID: 5667769925134965577}
   - component: {fileID: 7360578848538469237}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -357,7 +360,7 @@ GameObject:
   - component: {fileID: 8927638092149084251}
   - component: {fileID: 1439154993954829003}
   - component: {fileID: 4685629811007234106}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wind
   m_TagString: Weapon
   m_Icon: {fileID: 0}
