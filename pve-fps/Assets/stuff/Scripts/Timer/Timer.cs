@@ -20,7 +20,7 @@ public class Timer: MonoBehaviour
         if (remainingTtime <= 0)
         {
             // Add portal to the boss level
-            //Delete all enemies
+            //Delete all enemies   // can use GameObject.FindGameObjectsWithTag("Enemy") then use a foreach to delete them all
             //Delete all pills
         }
         else{
