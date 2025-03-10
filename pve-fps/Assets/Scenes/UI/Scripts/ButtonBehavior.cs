@@ -4,12 +4,10 @@ using UnityEngine.UI;
 
 public class ButtonBehavior : MonoBehaviour
 {
-    //public Button button;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject tutorial;
     void Start()
     {
-        //button = GetComponent<Button>();
-        //button.onClick.AddListener(StartButton);
+
     }
 
     public void StartButton()
@@ -17,6 +15,10 @@ public class ButtonBehavior : MonoBehaviour
         SceneManager.LoadScene("MainLevel");
     }
 
+    public void StartTutorial()
+    {
+        tutorial.SetActive(true);
+    }
     public void QuitButton()
     {
         Application.Quit();
