@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MainLevel.unity
     guid: a7f2105388616b34db292cae976bfeae
   - enabled: 1
-    path: Assets/Scenes/JosephTest/JosephTest.unity
-    guid: 38ec1957a5f8f014f82ff0fac4cba7d0
+    path: Assets/Scenes/BossRoom.unity
+    guid: 660af2d5213af2b4cba0cdc280f90bd6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
