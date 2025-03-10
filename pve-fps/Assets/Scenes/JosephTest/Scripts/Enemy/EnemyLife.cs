@@ -7,7 +7,7 @@ public class EnemyLife : MonoBehaviour
     [SerializeField] private EnemyHat _hat;
     [SerializeField] EnemyStats _stats;
 
-    public float _health;
+    private float _health;
     void Start()
     {
         _health = _stats.health;

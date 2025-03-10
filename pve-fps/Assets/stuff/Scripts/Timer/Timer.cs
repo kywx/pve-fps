@@ -5,9 +5,16 @@ using TMPro;
 
 public class Timer: MonoBehaviour
 {
+    private BossStatTracker _bossStats;
     [SerializeField] private TextMeshProUGUI timerText;
     float remainingTtime = 301;
-    float addedBossHealth = 0;
+    //float addedBossHealth = 0; pill method will access the BossStatTracker's bonus health count
+
+    void Start()
+    {
+        _bossStats = GameObject.FindWithTag("Stats").GetComponent<BossStatTracker>();
+        _bossStats._extraHealth = 0;
+    }
     void Update()
     {
         if (remainingTtime <= 0)
@@ -27,7 +34,7 @@ public class Timer: MonoBehaviour
     public void pill()
     {
         remainingTtime += 5;
-        addedBossHealth += 10;//Adds to a boss health counter to be used in boss creation
+        _bossStats.AddHealth(10f); //Adds to a boss health counter to be used in boss creation
     }
     
 }
