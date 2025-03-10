@@ -28,7 +28,7 @@ public class HatMovement : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (other.CompareTag("Ground"))
+        if (other.CompareTag("Ground"))//Just done for testing since I dont have kill zone can prob be deleted once in main
         {
             Destroy(gameObject);
         }
