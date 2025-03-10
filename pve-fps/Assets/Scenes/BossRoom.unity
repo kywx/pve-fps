@@ -119,6 +119,67 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &291318266
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 508fbe4837ad5304c9f64b9cdebb737e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 23.546196
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 508fbe4837ad5304c9f64b9cdebb737e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.036605835
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 508fbe4837ad5304c9f64b9cdebb737e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.5741577
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 508fbe4837ad5304c9f64b9cdebb737e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 508fbe4837ad5304c9f64b9cdebb737e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 508fbe4837ad5304c9f64b9cdebb737e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 508fbe4837ad5304c9f64b9cdebb737e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 508fbe4837ad5304c9f64b9cdebb737e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 508fbe4837ad5304c9f64b9cdebb737e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 508fbe4837ad5304c9f64b9cdebb737e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 508fbe4837ad5304c9f64b9cdebb737e, type: 3}
+      propertyPath: m_Name
+      value: hatSpin
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 508fbe4837ad5304c9f64b9cdebb737e, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 508fbe4837ad5304c9f64b9cdebb737e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 586088260}
+  m_SourcePrefab: {fileID: 100100000, guid: 508fbe4837ad5304c9f64b9cdebb737e, type: 3}
 --- !u!1 &396106892
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,6 +214,33 @@ Transform:
   - {fileID: 654945138}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &586088258 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 508fbe4837ad5304c9f64b9cdebb737e, type: 3}
+  m_PrefabInstance: {fileID: 291318266}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &586088260
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586088258}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b44b4c4dd669951499dd9c861b74cffe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &654945137
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,3 +1007,4 @@ SceneRoots:
   - {fileID: 2065430914}
   - {fileID: 396106893}
   - {fileID: 1885232948}
+  - {fileID: 291318266}
