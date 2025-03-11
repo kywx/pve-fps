@@ -7,11 +7,13 @@ public class PlayerColliding : MonoBehaviour
     public float pushRecieve = 10.0f;
     public float mass = 5.0f;
     private Vector3 pushVelocity;
+    
 
     private void Start()
     {
         pushVelocity = Vector3.zero;
         characterController = GetComponent<CharacterController>();
+        PlayerInteract.AddDamage += DamageIncrease;
     }
 
     private void Update()
@@ -40,5 +42,9 @@ public class PlayerColliding : MonoBehaviour
             pushVelocity = pushDir * pushRecieve * 3.0f;  // push receive can change based on the number of hats
             Debug.Log(pushVelocity);
         }
+    }
+    void DamageIncrease()
+    {
+        pushPower++;
     }
 }
