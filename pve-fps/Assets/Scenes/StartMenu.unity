@@ -1483,7 +1483,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 649071820}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1724956684}
+        m_TargetAssemblyTypeName: StoryUI, Assembly-CSharp
+        m_MethodName: ShiftRight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &649071820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2408,7 +2420,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1186696175}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1724956684}
+        m_TargetAssemblyTypeName: StoryUI, Assembly-CSharp
+        m_MethodName: ShiftLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1186696175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3489,7 +3513,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1945043811}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1724956684}
+        m_TargetAssemblyTypeName: StoryUI, Assembly-CSharp
+        m_MethodName: SkipStory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1945043811
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -33,7 +33,7 @@ public class StoryUI : MonoBehaviour
     }
 
 
-    private void SkipStory()
+    public void SkipStory()
     {
         SceneManager.LoadScene("MainLevel");
         //this.gameObject.SetActive(false);
@@ -41,7 +41,7 @@ public class StoryUI : MonoBehaviour
         //page = firstIndex;
     }
 
-    private void ShiftLeft()
+    public void ShiftLeft()
     {
         if (page > firstIndex)
         {
@@ -50,7 +50,7 @@ public class StoryUI : MonoBehaviour
         }
     }
 
-    private void ShiftRight()
+    public void ShiftRight()
     {
         if (page == pageList.Length - 1)
         {
