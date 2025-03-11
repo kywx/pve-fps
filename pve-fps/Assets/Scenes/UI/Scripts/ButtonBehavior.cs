@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class ButtonBehavior : MonoBehaviour
 {
     public GameObject tutorial;
+    public GameObject story;
     void Start()
     {
 
@@ -12,7 +13,8 @@ public class ButtonBehavior : MonoBehaviour
 
     public void StartButton()
     {
-        SceneManager.LoadScene("MainLevel");
+        story.SetActive(true);
+        //SceneManager.LoadScene("MainLevel");
     }
 
     public void StartTutorial()
