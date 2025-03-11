@@ -10,17 +10,15 @@ public class PlayerInteract : MonoBehaviour
     private LayerMask mask;
     private PlayerUI playerUI;
     private ActionManager actionManager;
-<<<<<<< HEAD
     public delegate void PickedHat();
     public static event PickedHat ActivateAnim;
     public delegate void PlayerGainDamage();
     public static event PlayerGainDamage AddDamage;
-=======
+
 
 
     [SerializeField] private float _damageBuff;
 
->>>>>>> 56c782e9193de2febf9ca3b99197b2218dd11fc6
     private int myHats;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -60,11 +58,8 @@ public class PlayerInteract : MonoBehaviour
                         myHats++;
                         playerUI.UpdateHatScore(myHats);
 
-<<<<<<< HEAD
-=======
 
                         GameObject.FindGameObjectWithTag("Stats").GetComponent<BossStatTracker>()._extraDamage += _damageBuff;
->>>>>>> 56c782e9193de2febf9ca3b99197b2218dd11fc6
                     }
                     interactable.BaseInteract();  // base interact, may delete so always call last
                 }

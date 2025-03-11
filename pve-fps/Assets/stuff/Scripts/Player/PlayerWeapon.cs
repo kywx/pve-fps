@@ -10,12 +10,9 @@ public class PlayerWeapon : MonoBehaviour
     private BossStatTracker statTracker;
     void Start()
     {
-<<<<<<< HEAD
         PlayerInteract.ActivateAnim += AddDamage;
-=======
         statTracker = GameObject.FindGameObjectWithTag("Stats").GetComponent<BossStatTracker>();
         weaponDamage = _baseDamage;
->>>>>>> 56c782e9193de2febf9ca3b99197b2218dd11fc6
     }
 
     // Update is called once per frame
