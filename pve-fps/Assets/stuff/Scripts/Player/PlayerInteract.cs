@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
@@ -9,7 +10,17 @@ public class PlayerInteract : MonoBehaviour
     private LayerMask mask;
     private PlayerUI playerUI;
     private ActionManager actionManager;
+<<<<<<< HEAD
+    public delegate void PickedHat();
+    public static event PickedHat ActivateAnim;
+    public delegate void PlayerGainDamage();
+    public static event PlayerGainDamage AddDamage;
+=======
 
+
+    [SerializeField] private float _damageBuff;
+
+>>>>>>> 56c782e9193de2febf9ca3b99197b2218dd11fc6
     private int myHats;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,11 +30,13 @@ public class PlayerInteract : MonoBehaviour
         actionManager = GetComponent<ActionManager>();
 
         myHats = 0;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+       
         playerUI.UpdateText(string.Empty);
         // create a ray at the center of the camera, shooting outwards
         Ray ray = new Ray(cam.transform.position, cam.transform.forward);
@@ -42,8 +55,16 @@ public class PlayerInteract : MonoBehaviour
                     // if the interactable is HatCollection, then update hats
                     if (interactable is HatCollection)
                     {
+                        AddDamage?.Invoke();
+                        ActivateAnim?.Invoke();
                         myHats++;
                         playerUI.UpdateHatScore(myHats);
+
+<<<<<<< HEAD
+=======
+
+                        GameObject.FindGameObjectWithTag("Stats").GetComponent<BossStatTracker>()._extraDamage += _damageBuff;
+>>>>>>> 56c782e9193de2febf9ca3b99197b2218dd11fc6
                     }
                     interactable.BaseInteract();  // base interact, may delete so always call last
                 }

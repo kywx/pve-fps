@@ -3,6 +3,8 @@ using UnityEngine;
 public class PillCollection : Interactable
 {
     private Timer timer;
+    public delegate void AddTime();
+    public static event AddTime addTime;
 
     void Start()
     {
@@ -11,8 +13,10 @@ public class PillCollection : Interactable
     }
     protected override void Interact()
     {
+
         Destroy(gameObject);
         // TODO: Add pill effects here
         timer.pill();
+        addTime?.Invoke();
     }
 }

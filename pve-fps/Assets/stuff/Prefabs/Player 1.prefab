@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 559241921934495109}
   - component: {fileID: 8677677751273743933}
   - component: {fileID: 3365433576431143415}
+  - component: {fileID: 6657119564268331280}
   m_Layer: 7
   m_Name: Player 1
   m_TagString: Player
@@ -209,6 +210,20 @@ MonoBehaviour:
   pushPower: 2
   pushRecieve: 8
   mass: 5
+--- !u!114 &6657119564268331280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2620243725505828499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7953563860ee3847b124d5b5d465570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _DamagePopUp: {fileID: 0}
+  _popTime: {fileID: 0}
 --- !u!1 &5629396154878024488
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,11 +7,12 @@ public class Timer: MonoBehaviour
 {
     private BossStatTracker _bossStats;
     [SerializeField] private TextMeshProUGUI timerText;
-    float remainingTtime = 301;
+    public float remainingTtime = 301;
     //float addedBossHealth = 0; pill method will access the BossStatTracker's bonus health count
 
     void Start()
     {
+        PillCollection.addTime += pill;
         _bossStats = GameObject.FindWithTag("Stats").GetComponent<BossStatTracker>();
         _bossStats._extraHealth = 0;
     }
