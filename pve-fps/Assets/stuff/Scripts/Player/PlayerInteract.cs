@@ -10,6 +10,9 @@ public class PlayerInteract : MonoBehaviour
     private PlayerUI playerUI;
     private ActionManager actionManager;
 
+
+    [SerializeField] private float _damageBuff;
+
     private int myHats;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,6 +47,9 @@ public class PlayerInteract : MonoBehaviour
                     {
                         myHats++;
                         playerUI.UpdateHatScore(myHats);
+
+
+                        GameObject.FindGameObjectWithTag("Stats").GetComponent<BossStatTracker>()._extraDamage += _damageBuff;
                     }
                     interactable.BaseInteract();  // base interact, may delete so always call last
                 }
