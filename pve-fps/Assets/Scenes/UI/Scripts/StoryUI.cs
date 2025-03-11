@@ -36,9 +36,9 @@ public class StoryUI : MonoBehaviour
     private void SkipStory()
     {
         SceneManager.LoadScene("MainLevel");
-        this.gameObject.SetActive(false);
-        ChangePage(page, firstIndex);
-        page = firstIndex;
+        //this.gameObject.SetActive(false);
+        //ChangePage(page, firstIndex);
+        //page = firstIndex;
     }
 
     private void ShiftLeft()
